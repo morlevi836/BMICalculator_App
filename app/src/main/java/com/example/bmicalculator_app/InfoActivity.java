@@ -24,7 +24,8 @@ public class InfoActivity extends AppCompatActivity implements View.OnClickListe
     EditText weight;
     Slider heightSlider;
     Spinner spinner;
-    Button submit;
+    String result;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,16 +38,15 @@ public class InfoActivity extends AppCompatActivity implements View.OnClickListe
         spinner.setAdapter(adapter);
 
         //Links the right elements to the right elements in XML
-        calculateButton = findViewById(R.id.calculate);
-
         male = findViewById(R.id.maleButton);
         female = findViewById(R.id.femaleButton);
         fullNameText = findViewById(R.id.fullNameText);
         ageText = findViewById(R.id.ageText);
-        intent = getIntent();
         weight = findViewById(R.id.weightText);
         heightSlider = findViewById(R.id.heightSlider);
-
+        calculateButton = findViewById(R.id.calculate);
+        result = spinner.toString();
+        intent = getIntent();
         //setting click listener to the calculate button
         calculateButton.setOnClickListener(this);
     }
@@ -58,7 +58,7 @@ public class InfoActivity extends AppCompatActivity implements View.OnClickListe
             Toast.makeText(this, getResources().getString(R.string.errorMessage), Toast.LENGTH_SHORT).show();
         else {
             //setting up the 'slimness' variable
-            slimness = findSelectedButton(spinner);
+            slimness = findSelectedButton(result);
             //pass the data field to the ResultActivity activity.
             intent.putExtra("height", (int) heightSlider.getValue());
             intent.putExtra("slimness", slimness);
@@ -70,11 +70,11 @@ public class InfoActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
-    private Double findSelectedButton(Spinner checkedRadioButtonId) {
+    private Double findSelectedButton(String bodyType) {
         //getting the button that is benn checked
-        if (checkedRadioButtonId == "small") {
+        if (bodyType.equals("small")) {
             return 0.9;
-        } else if (checkedRadioButtonId == R.id.mediumButton) {
+        } else if (bodyType.equals("medium")) {
             return 1.0;
         } else
             return 1.1;

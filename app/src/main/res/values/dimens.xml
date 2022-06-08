@@ -2,7 +2,7 @@
 <resources>
     <dimen name="titleSize">50sp</dimen>
     <dimen name="titleMarginTop">25dp</dimen>
-    <dimen name="marginTop">100dp</dimen>
+    <dimen name="marginTop">35dp</dimen>
     <dimen name="layoutSize">230dp</dimen>
     <dimen name="smallMargin">30dp</dimen>
     <dimen name="marginSmaller">15dp</dimen>

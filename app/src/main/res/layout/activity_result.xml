@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@color/ic_launcher_background"
     tools:context=".ResultActivity">
 
     <TextView
@@ -23,7 +23,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/bmi"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="14dp"
         android:text="@string/bmiText" />
 
     <TextView
@@ -33,8 +33,9 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/bmiText"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="15dp"
-        android:text="@string/status" />
+        android:layout_marginTop="16dp"
+        android:text="@string/status"
+        android:textSize="29sp" />
 
     <TextView
         android:id="@+id/statusText"
@@ -43,23 +44,23 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/status"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="10dp"
         android:text="@string/statusText"
         android:textSize="40sp" />
 
     <RelativeLayout
         android:id="@+id/border"
-        android:layout_width="300dp"
+        android:layout_width="307dp"
         android:layout_height="330dp"
         android:layout_below="@id/statusText"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="25dp"
         android:background="@drawable/border3"
         android:padding="20dp">
 
         <TextView
             android:id="@+id/messageText"
-            style="@style/textResultBMI"
+            style="@style/textResultMessage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
@@ -69,7 +70,7 @@
 
         <TextView
             android:id="@+id/messageText2"
-            style="@style/textResultBMI"
+            style="@style/textResultMessage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/messageText"
@@ -80,7 +81,7 @@
 
         <TextView
             android:id="@+id/messageText3"
-            style="@style/textResultBMI"
+            style="@style/textResultMessage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/messageText2"
@@ -97,8 +98,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/border"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
-        android:textColor="@color/black"
-        android:text="@string/homePage" />
+        android:layout_marginTop="14dp"
+        android:text="@string/homePage"
+        android:textColor="@color/black" />
 
 </RelativeLayout>

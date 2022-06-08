@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="titleSize">50sp</dimen>
-    <dimen name="titleMarginTop">25dp</dimen>
+    <dimen name="titleSize">48sp</dimen>
+    <dimen name="titleMarginTop">28dp</dimen>
     <dimen name="marginTop">35dp</dimen>
     <dimen name="layoutSize">230dp</dimen>
     <dimen name="smallMargin">30dp</dimen>
@@ -12,7 +12,7 @@
     <dimen name="stringMargin">5dp</dimen>
     <dimen name="TextSize">20sp</dimen>
     <dimen name="margin">30dp</dimen>
-    <dimen name="marginStart">25dp</dimen>
+    <dimen name="marginStart">28dp</dimen>
     <dimen name="marginQuit">10dp</dimen>
     <dimen name="TextLayout">100dp</dimen>
     <dimen name="paddingSmall">7dp</dimen>

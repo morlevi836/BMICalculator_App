@@ -26,8 +26,8 @@
     <string name="messageText">message</string>
     <string name="bmi_text">%1$,.2f</string>
     <string name="status_text">%1$s </string>
-    <string name="message_text"><b>Actual Weight:</b> %1$,.2f</string>
-    <string name="message_text2"><b>Ideal Weight:</b> %1$,.2f</string>
+    <string name="message_text"><b>Actual Weight:</b> %1$,.2f </string>
+    <string name="message_text2"><b>Ideal Weight:</b> %1$,.2f <b>\n</b></string>
     <string name="message_text3_1">Try to eat more and work out in order to gain some mass. \nGood luck!</string>
     <string name="message_text3_2">Way to go! you are in a good shape. Working out and eating vegetables is always recommended. \nGood luck!</string>
     <string name="message_text3_3">Try to eat less junk food and more vegetables to lose some mass. \nGood luck!</string>

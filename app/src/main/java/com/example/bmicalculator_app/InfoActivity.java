@@ -9,7 +9,6 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
-import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -24,17 +23,17 @@ public class InfoActivity extends AppCompatActivity implements View.OnClickListe
     Double slimness;
     EditText weight;
     Slider heightSlider;
+    Spinner spinner;
     Button submit;
-    RadioGroup group;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_info);
 
-        Spinner spinner = findViewById(R.id.bodyType);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.body_type, android.R.layout.simple_spinner_dropdown_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_item);
+        spinner = findViewById(R.id.bodyType);
         spinner.setAdapter(adapter);
 
         //Links the right elements to the right elements in XML
@@ -59,7 +58,7 @@ public class InfoActivity extends AppCompatActivity implements View.OnClickListe
             Toast.makeText(this, getResources().getString(R.string.errorMessage), Toast.LENGTH_SHORT).show();
         else {
             //setting up the 'slimness' variable
-            slimness = findSelectedButton(group.getCheckedRadioButtonId());
+            slimness = findSelectedButton(spinner);
             //pass the data field to the ResultActivity activity.
             intent.putExtra("height", (int) heightSlider.getValue());
             intent.putExtra("slimness", slimness);
@@ -71,9 +70,9 @@ public class InfoActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
-    private Double findSelectedButton(int checkedRadioButtonId) {
+    private Double findSelectedButton(Spinner checkedRadioButtonId) {
         //getting the button that is benn checked
-        if (checkedRadioButtonId == R.id.smallButton) {
+        if (checkedRadioButtonId == "small") {
             return 0.9;
         } else if (checkedRadioButtonId == R.id.mediumButton) {
             return 1.0;

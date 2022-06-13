@@ -4,17 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#673AB7"
-    android:padding="20dp"
+    android:background="@color/infoActivityBackground"
+    android:padding="10dp"
     tools:context=".InfoActivity">
 
     <RelativeLayout
         android:id="@+id/border1"
-        android:layout_width="388dp"
-        android:layout_height="85dp"
+        style="@style/border"
+        android:layout_width="@dimen/infoBorderWidth"
+        android:layout_height="@dimen/infoBorderHeight"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/border"
+        android:layout_marginTop="@dimen/border1_marginTop"
         android:paddingBottom="@dimen/smallMargin">
 
         <TextView
@@ -29,27 +29,26 @@
 
         <EditText
             android:id="@+id/fullNameText"
+            style="@style/border2"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginStart="125dp"
             android:layout_marginTop="25dp"
             android:layout_marginEnd="15dp"
-            android:background="@drawable/border2"
             android:importantForAutofill="no"
             android:inputType="textAutoComplete"
             android:textAlignment="center"
-            android:textColor="@color/black"
             tools:ignore="LabelFor" />
     </RelativeLayout>
 
     <RelativeLayout
         android:id="@+id/border2"
-        android:layout_width="388dp"
+        style="@style/border"
+        android:layout_width="@dimen/infoBorderWidth"
         android:layout_height="100dp"
         android:layout_below="@id/border1"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/border">
+        android:layout_marginTop="@dimen/border_marginTop">
 
         <TextView
             android:id="@+id/gender"
@@ -57,52 +56,50 @@
             android:layout_width="112dp"
             android:layout_height="44dp"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="33dp"
             android:text="@string/gender"
             android:textAlignment="center" />
 
         <RadioGroup
             android:id="@+id/genderGroup"
+            style="@style/border"
             android:layout_width="240sp"
             android:layout_height="wrap_content"
             android:layout_marginStart="110sp"
             android:layout_marginTop="10sp"
             android:layout_marginEnd="10sp"
-            android:background="@drawable/border"
             android:orientation="horizontal"
             android:padding="15sp">
 
             <RadioButton
                 android:id="@+id/maleButton"
+                style="@style/border2"
                 android:layout_width="85dp"
                 android:layout_height="wrap_content"
-                android:background="@drawable/border2"
-                android:text="@string/male"
-                android:textColor="@color/black"
-                android:textSize="@dimen/TextSize"
+                android:text="@string/maleText"
+                android:textSize="@dimen/textSize"
                 android:textStyle="bold" />
 
             <RadioButton
                 android:id="@+id/femaleButton"
+                style="@style/border2"
                 android:layout_width="110dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:background="@drawable/border2"
-                android:text="@string/female"
-                android:textColor="@color/black"
-                android:textSize="@dimen/TextSize"
+                android:text="@string/femaleText"
+                android:textSize="@dimen/textSize"
                 android:textStyle="bold" />
         </RadioGroup>
     </RelativeLayout>
 
     <RelativeLayout
         android:id="@+id/border3"
-        android:layout_width="388dp"
-        android:layout_height="85dp"
+        style="@style/border"
+        android:layout_width="@dimen/infoBorderWidth"
+        android:layout_height="@dimen/infoBorderHeight"
         android:layout_below="@id/border2"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/border"
+        android:layout_marginTop="@dimen/border_marginTop"
         android:paddingBottom="@dimen/smallMargin">
 
         <TextView
@@ -117,27 +114,26 @@
 
         <EditText
             android:id="@+id/ageText"
+            style="@style/border2"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginStart="125dp"
             android:layout_marginTop="25dp"
             android:layout_marginEnd="15dp"
-            android:background="@drawable/border2"
             android:importantForAutofill="no"
             android:inputType="number"
             android:textAlignment="center"
-            android:textColor="@color/black"
             tools:ignore="LabelFor" />
     </RelativeLayout>
 
     <RelativeLayout
         android:id="@+id/border4"
-        android:layout_width="388dp"
-        android:layout_height="85dp"
+        style="@style/border"
+        android:layout_width="@dimen/infoBorderWidth"
+        android:layout_height="@dimen/infoBorderHeight"
         android:layout_below="@id/border3"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/border"
+        android:layout_marginTop="@dimen/border_marginTop"
         android:paddingBottom="@dimen/smallMargin">
 
         <TextView
@@ -152,31 +148,30 @@
 
         <EditText
             android:id="@+id/weightText"
+            style="@style/border2"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginStart="125dp"
             android:layout_marginTop="25dp"
             android:layout_marginEnd="15dp"
-            android:background="@drawable/border2"
             android:importantForAutofill="no"
             android:inputType="numberDecimal"
             android:textAlignment="center"
-            android:textColor="@color/black"
             tools:ignore="LabelFor" />
     </RelativeLayout>
 
     <RelativeLayout
         android:id="@+id/border5"
-        android:layout_width="388dp"
-        android:layout_height="88dp"
+        style="@style/border"
+        android:layout_width="@dimen/infoBorderWidth"
+        android:layout_height="@dimen/infoBorderHeight"
         android:layout_below="@id/border4"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/border"
+        android:layout_marginTop="@dimen/border_marginTop"
         android:paddingBottom="@dimen/smallMargin">
 
         <TextView
-            android:id="@+id/BodyType"
+            android:id="@+id/bodyType"
             style="@style/Text"
             android:layout_width="112dp"
             android:layout_height="match_parent"
@@ -186,7 +181,7 @@
             android:textAlignment="center" />
 
         <Spinner
-            android:id="@+id/bodyType"
+            android:id="@+id/bodyTypeSpinner"
             style="@android:style/Widget.Spinner"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -197,12 +192,12 @@
 
     <RelativeLayout
         android:id="@+id/border6"
-        android:layout_width="390dp"
-        android:layout_height="110dp"
+        style="@style/border"
+        android:layout_width="@dimen/infoBorderWidth"
+        android:layout_height="105dp"
         android:layout_below="@id/border5"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/border"
+        android:layout_marginTop="@dimen/border_marginTop"
         android:paddingBottom="@dimen/smallMargin">
 
         <TextView
@@ -236,6 +231,6 @@
         android:layout_below="@id/border6"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
-        android:text="@string/calculate" />
+        android:text="@string/calculateButtonText" />
 
 </RelativeLayout>

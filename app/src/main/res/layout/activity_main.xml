@@ -1,63 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#673AB7"
+    android:background="@color/mainActivityBackground"
+    android:padding="20dp"
     tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/mainTitle"
+        style="@style/textTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="@dimen/titleMarginTop"
-        android:text="@string/mainTitle"
-        android:textColor="@color/titleColor"
-        android:textSize="@dimen/titleSize"
-        android:textStyle="bold" />
+        android:layout_marginTop="@dimen/titleMarginTop" />
 
     <ImageView
         android:id="@+id/mainImage"
-        android:layout_width="@dimen/imageSizeWidth"
-        android:layout_height="@dimen/imageSizeHeight"
+        android:layout_width="@dimen/imageWidth"
+        android:layout_height="@dimen/imageHeight"
         android:layout_below="@id/mainTitle"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="@dimen/imageMargin"
+        android:layout_marginTop="@dimen/imageMarginTop"
         android:contentDescription="@string/mainTitle"
         android:src="@mipmap/image_main" />
 
     <Button
         android:id="@+id/startButton"
         style="@style/Button"
-        android:layout_width="145dp"
-        android:layout_height="65dp"
+        android:layout_width="@dimen/startButtonWidth"
+        android:layout_height="@dimen/startButtonHeight"
         android:layout_below="@id/mainImage"
-        android:layout_centerInParent="true"
-        android:layout_marginTop="@dimen/marginStart"
-        android:text="@string/startButton"
-        android:textColor="@color/buttonStartColor"
-        android:textSize="@dimen/TextSize" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/startButton_marginTop"
+        android:text="@string/startButtonText"
+        android:textColor="@color/startButtonColor"
+        android:textSize="@dimen/textSize" />
 
     <Button
         android:id="@+id/quitButton"
         style="@style/Button"
-        android:layout_width="90dp"
-        android:layout_height="50dp"
+        android:layout_width="@dimen/quitButtonWidth"
+        android:layout_height="@dimen/quitButtonHeight"
         android:layout_below="@id/startButton"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="@dimen/marginQuit"
+        android:layout_marginTop="@dimen/quitButton_marginTop"
         android:text="@string/quitButton"
         android:textColor="@color/buttonQuitColor"
-        android:textSize="@dimen/TextSize" />
+        android:textSize="@dimen/textSize" />
 
     <pl.droidsonroids.gif.GifImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_below="@id/quitButton"
         android:layout_centerHorizontal="true"
         android:src="@mipmap/gif_main" />
-
 </RelativeLayout>
 

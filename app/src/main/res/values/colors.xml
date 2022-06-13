@@ -9,6 +9,9 @@
     <color name="white">#FFFFFFFF</color>
 
     <color name="titleColor">#F4E13B</color>
-    <color name="buttonStartColor">#370D81</color>
+    <color name="startButtonColor">#370D81</color>
     <color name="buttonQuitColor">#391280</color>
+    <color name="mainActivityBackground">#673AB7</color>
+    <color name="infoActivityBackground">#673AB6</color>
+    <color name="resultActivityBackground">#8429E2</color>
 </resources>

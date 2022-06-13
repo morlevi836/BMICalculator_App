@@ -1,36 +1,29 @@
 /*
 Exercise 2 android
-Uriya Hadad ID 315571125 ooria47@gmail.com
-Avioo Hadad ID 313559866 avioo360@gmail.com
-Uriya - First year, Computer Science Department - Ashqelon College.
-Avioo - Second year, Computer Science Department - Ashqelon College.
+David Gruzmark ID 324825454 Davidgro100@gmail.com
+Mor Levi ID 313559866, Morlevimail@gmail.com
+David - Second year, Computer Science Department - Ashkelon College.
+Mor - Second year, Computer Science Department - Ashkelon College.
 
 Assignment details:
-Writing a program using Android application that calculates the BMI of a person base on the weight and height.
-Also calculates the ideal weight of a human base on the height, age and body frame.
+Writing an Android application that calculates the BMI of a person based on weight, height and body type.
+It also calculates your ideal weight and gives you some advice on how to get there.
+The user has to enter all the details to get to the results. Otherwise, he gets a toast message telling him to fill everything.
 
-The user has to enter all the necessary information to calculate the BMI and the Ideal-weight,
-else he will get a Toast message that will tell him to to that.
-
-Algorithm:
-Calculation the BMI by the formula: BMI = W / H^2.
+ Algorithm:
+BMI = Weight / Height^2 .
 The weight and the height are given by the user.
-The ideal weight is calculated according to the
-
-Creff formula: (height - 100 + (age / 10)) * 0.9 * slimness.
-slimness is calculated by body-frame:
-•	1 for normal body-type.
-•	1.1 for large body-type.
-•	0.9 for small body-type.
-Notice that both formulas are for all gender.
+Ideal weight = (height - 100 + (age / 10)) * 0.9 * slimness.
+Slimness is calculated by body-frame: small =  0.9, medium = 1, large = 1.1.
+The formulas apply for both genders.
 
 Sources:
-BMI formula: https://en.wikipedia.org/wiki/Body_mass_index#cite_ref-nhsob_10-0.
-Ideal weight formula: https://www.vcalc.com/wiki/MichaelBartmess/CREFF+Formula.
+BMI formula: https://en.wikipedia.org/wiki/Body_mass_index#cite_ref-nhsob_10-0
+Ideal weight formula: https://www.vcalc.com/wiki/MichaelBartmess/CREFF+Formula
 
 Main Goals:
-Using android elements (buttons, TextView, EditText, sliders, radio buttons etc.).
-learning to work with the XML files that are existing in the project.
+Using android elements (TextView, EditText, buttons, sliders, radio buttons etc.).
+learning to work with XML files to design the project.
 learning to switch from one activity to another and pass data along with it.
 Using action listener to interact with the user.
  */
@@ -55,16 +48,14 @@ public class MainActivity extends AppCompatActivity {
         startButton = findViewById(R.id.startButton);
         quitButton = findViewById(R.id.quitButton);
 
-        //setting click listener to the quit button
-        quitButton.setOnClickListener(e -> finish());
-
         //setting click listener to the start button
-        startButton.setOnClickListener(view -> {
+        startButton.setOnClickListener(e -> {
             //Defining intent element to switch to InfoActivity.
             Intent intent = new Intent(this, InfoActivity.class);
             startActivity(intent);
-            //closing the current activity
-            finish();
         });
+
+        //setting click listener to the quit button
+        quitButton.setOnClickListener(e -> finishAffinity());
     }
 }

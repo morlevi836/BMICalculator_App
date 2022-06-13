@@ -19,7 +19,7 @@ public class ResultActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
-        //Links the right elements to the right elements in XML
+        //Links the elements
         bmiText = findViewById(R.id.bmiText);
         statusText = findViewById(R.id.statusText);
         MessageDetails = findViewById(R.id.messageText);
@@ -49,7 +49,7 @@ public class ResultActivity extends AppCompatActivity {
         updateMessage(actualWeight, idealWeight);
 
         //setting click listener to the 'mainPage' button
-        homeButton.setOnClickListener(v -> {
+        homeButton.setOnClickListener(e -> {
             //switching to the MainActivity.
             startActivity(new Intent(this, MainActivity.class));
             //closing the current activity

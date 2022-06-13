@@ -1,13 +1,13 @@
 <resources>
     <string name="app_name">BMI Calculator</string>
     <string name="mainTitle">BMI Calculator</string>
-    <string name="startButton">start</string>
+    <string name="startButtonText">start</string>
     <string name="quitButton">quit</string>
     <string name="fullName">Full Name:</string>
     <string name="age">Age:</string>
     <string name="gender">Gender:</string>
-    <string name="male">Male</string>
-    <string name="female">Female</string>
+    <string name="maleText">Male</string>
+    <string name="femaleText">Female</string>
     <string name="weight">Weight:</string>
     <string name="bodyType">Body-Type:</string>
     <string-array name="body_type">
@@ -16,8 +16,8 @@
         <item name="large">Large</item>
     </string-array>
     <string name="height">Height:</string>
-    <string name="calculate">calculate</string>
-    <string name="errorMessage">Fill in all the required fields!</string>
+    <string name="calculateButtonText">calculate</string>
+    <string name="errorMessage">Enter all the required fields to continue.</string>
     <string name="bmi">Your BMI is:</string>
     <string name="bmiText">BMI</string>
     <string name="status">Your Status is:</string>

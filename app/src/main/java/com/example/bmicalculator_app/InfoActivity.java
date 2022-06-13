@@ -34,7 +34,7 @@ public class InfoActivity extends AppCompatActivity implements View.OnClickListe
 
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.body_type, android.R.layout.simple_spinner_dropdown_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_item);
-        spinner = findViewById(R.id.bodyType);
+        spinner = findViewById(R.id.bodyTypeSpinner);
         spinner.setAdapter(adapter);
 
         //Links the right elements to the right elements in XML
@@ -54,7 +54,7 @@ public class InfoActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
         //in case the user didn't put any data in the text field
-        if (weight.getText().toString().equals("") || fullNameText.getText().toString().equals("") || ageText.getText().toString().equals(""))
+        if (weight.getText().toString().equals("") || ageText.getText().toString().equals(""))
             Toast.makeText(this, getResources().getString(R.string.errorMessage), Toast.LENGTH_SHORT).show();
         else {
             //setting up the 'slimness' variable
@@ -65,8 +65,6 @@ public class InfoActivity extends AppCompatActivity implements View.OnClickListe
             intent.putExtra("weight", Double.parseDouble(weight.getText().toString()));
             intent.setClass(this, ResultActivity.class);
             startActivity(intent);
-            //closing the current activity
-            finish();
         }
     }
 

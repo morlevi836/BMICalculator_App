@@ -2,18 +2,34 @@
 <resources>
     <dimen name="titleSize">48sp</dimen>
     <dimen name="titleMarginTop">28dp</dimen>
+
+    <dimen name="imageWidth">340dp</dimen>
+    <dimen name="imageHeight">230dp</dimen>
+    <dimen name="imageMarginTop">20dp</dimen>
+
+    <dimen name="startButtonWidth">145dp</dimen>
+    <dimen name="startButtonHeight">65dp</dimen>
+    <dimen name="startButton_marginTop">25dp</dimen>
+
+    <dimen name="quitButtonWidth">90dp</dimen>
+    <dimen name="quitButtonHeight">50dp</dimen>
+    <dimen name="quitButton_marginTop">10dp</dimen>
+
+    <dimen name="textSize">20sp</dimen>
+
+    <dimen name="infoBorderWidth">390dp</dimen>
+    <dimen name="infoBorderHeight">90dp</dimen>
+
+    <dimen name="border1_marginTop">20dp</dimen>
+    <dimen name="border_marginTop">10dp</dimen>
+
     <dimen name="marginTop">35dp</dimen>
     <dimen name="layoutSize">230dp</dimen>
     <dimen name="smallMargin">30dp</dimen>
     <dimen name="marginSmaller">15dp</dimen>
-    <dimen name="imageSizeWidth">340dp</dimen>
-    <dimen name="imageSizeHeight">230dp</dimen>
-    <dimen name="imageMargin">20dp</dimen>
+
     <dimen name="stringMargin">5dp</dimen>
-    <dimen name="TextSize">20sp</dimen>
     <dimen name="margin">30dp</dimen>
-    <dimen name="marginStart">28dp</dimen>
-    <dimen name="marginQuit">10dp</dimen>
     <dimen name="TextLayout">100dp</dimen>
     <dimen name="paddingSmall">7dp</dimen>
     <dimen name="TextViewLayout">80dp</dimen>
@@ -22,5 +38,4 @@
     <dimen name="ValueFrom">140</dimen>
     <dimen name="step">1</dimen>
     <dimen name="sliderWeight">300dp</dimen>
-
 </resources>

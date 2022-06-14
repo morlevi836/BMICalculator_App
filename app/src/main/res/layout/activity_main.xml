@@ -50,8 +50,8 @@
         android:textSize="@dimen/textSize" />
 
     <pl.droidsonroids.gif.GifImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_below="@id/quitButton"
         android:layout_centerHorizontal="true"
         android:src="@mipmap/gif_main" />

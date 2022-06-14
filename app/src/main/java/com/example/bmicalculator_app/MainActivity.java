@@ -1,7 +1,7 @@
 /*
 Exercise 2 android
 David Gruzmark ID 324825454 Davidgro100@gmail.com
-Mor Levi ID 313559866, Morlevimail@gmail.com
+Mor Levi ID 21875207, Morlevimail@gmail.com
 David - Second year, Computer Science Department - Ashkelon College.
 Mor - Second year, Computer Science Department - Ashkelon College.
 

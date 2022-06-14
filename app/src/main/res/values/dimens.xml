@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="titleSize">48sp</dimen>
-    <dimen name="titleMarginTop">28dp</dimen>
+    <dimen name="title_marginTop">28dp</dimen>
 
     <dimen name="imageWidth">340dp</dimen>
     <dimen name="imageHeight">230dp</dimen>
@@ -22,6 +22,13 @@
 
     <dimen name="border1_marginTop">20dp</dimen>
     <dimen name="border_marginTop">10dp</dimen>
+
+    <dimen name="genderBorderHeight">100dp</dimen>
+    <dimen name="genderText_marginTop">35dp</dimen>
+
+    <dimen name="textBorderWidth">112dp</dimen>
+    <dimen name="text_marginStart">15dp</dimen>
+    <dimen name="text_marginTop">25dp</dimen>
 
     <dimen name="marginTop">35dp</dimen>
     <dimen name="layoutSize">230dp</dimen>

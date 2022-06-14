@@ -37,7 +37,7 @@ public class InfoActivity extends AppCompatActivity implements View.OnClickListe
         spinner = findViewById(R.id.bodyTypeSpinner);
         spinner.setAdapter(adapter);
 
-        //Links the right elements to the right elements in XML
+        //Links the elements to their matching XML elements
         male = findViewById(R.id.maleButton);
         female = findViewById(R.id.femaleButton);
         fullNameText = findViewById(R.id.fullNameText);
@@ -47,19 +47,19 @@ public class InfoActivity extends AppCompatActivity implements View.OnClickListe
         calculateButton = findViewById(R.id.calculate);
         result = spinner.toString();
         intent = getIntent();
-        //setting click listener to the calculate button
+        //setting the Calculate button's click listener
         calculateButton.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
-        //in case the user didn't put any data in the text field
+        //in case the user didn't enter the required fields to the system.
         if (weight.getText().toString().equals("") || ageText.getText().toString().equals(""))
             Toast.makeText(this, getResources().getString(R.string.errorMessage), Toast.LENGTH_SHORT).show();
         else {
-            //setting up the 'slimness' variable
+            //setting up 'slimness' variable
             slimness = findSelectedButton(result);
-            //pass the data field to the ResultActivity activity.
+            //handing the data to ResultActivity.
             intent.putExtra("height", (int) heightSlider.getValue());
             intent.putExtra("slimness", slimness);
             intent.putExtra("weight", Double.parseDouble(weight.getText().toString()));
@@ -69,7 +69,7 @@ public class InfoActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private Double findSelectedButton(String bodyType) {
-        //getting the button that is benn checked
+        //getting the button that's been clicked
         if (bodyType.equals("small")) {
             return 0.9;
         } else if (bodyType.equals("medium")) {

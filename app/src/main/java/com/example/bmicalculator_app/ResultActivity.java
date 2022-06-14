@@ -19,7 +19,7 @@ public class ResultActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
-        //Links the elements
+        //Links the elements to their matching XML elements
         bmiText = findViewById(R.id.bmiText);
         statusText = findViewById(R.id.statusText);
         MessageDetails = findViewById(R.id.messageText);
@@ -27,28 +27,28 @@ public class ResultActivity extends AppCompatActivity {
         MessageDetails3 = findViewById(R.id.messageText3);
         homeButton = findViewById(R.id.mainPageButt);
 
-        //getting all the data from the intent.
+        //getting the data from InfoActivity.
         age = getIntent().getIntExtra("age", 0);
         slimness = getIntent().getDoubleExtra("slimness", 0);
         actualWeight = getIntent().getDoubleExtra("weight", 0);
         height = (getIntent().getIntExtra("height", 0)) / 100.0;
 
-        //calculation the BMI.
+        //calculates the BMI value.
         bmiValue = actualWeight / (height * height);
 
-        //calculation the ideal weight.
+        //calculates the ideal weight.
         idealWeight = ((height * 100) - 100 + (age / 10.0)) * 0.9 * slimness;
 
-        //changing the bmi text view.
+        //sets the BMI text view.
         bmiText.setText(getResources().getString(R.string.bmi_text, bmiValue));
 
-        //calculation and changing the weight status text view.
+        //calculates and updates the weight status text view.
         statusText(bmiValue);
 
-        //writing a message to the user that compares the ideal weight to the current weight
+        //writing a message to the user that compares the ideal weight to the actual weight
         updateMessage(actualWeight, idealWeight);
 
-        //setting click listener to the 'mainPage' button
+        //setting the home button's click listener
         homeButton.setOnClickListener(e -> {
             //switching to the MainActivity.
             startActivity(new Intent(this, MainActivity.class));
@@ -79,7 +79,7 @@ public class ResultActivity extends AppCompatActivity {
     }
 
     private void statusText(double bmiValue) {
-        //calculation the weight status based on the bmi.
+        //calculating the weight status based on the BMI.
         if (bmiValue < 15)
             WeightStatus = "Anorexic";
         else if (15 <= bmiValue && bmiValue < 18.5)
@@ -93,7 +93,7 @@ public class ResultActivity extends AppCompatActivity {
         else if (35 <= bmiValue)
             WeightStatus = "Extreme Obese";
 
-        //changing the weight status text view.
+        //updating the weight status text view.
         statusText.setText(getResources().getString(R.string.status_text, WeightStatus));
     }
 }

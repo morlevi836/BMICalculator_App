@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //Links the right elements to the right elements in XML
+        //Links the elements to their matching XML elements
         startButton = findViewById(R.id.startButton);
         quitButton = findViewById(R.id.quitButton);
 
@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
-        //setting click listener to the quit button
+        //setting the quit button's click listener
         quitButton.setOnClickListener(e -> finishAffinity());
     }
 }
